@@ -1,5 +1,7 @@
 'use client';
 
+import './experience.css';
+
 export default function Experience() {
   const experiences = [
     {
@@ -42,14 +44,7 @@ export default function Experience() {
   ];
 
   return (
-    <div style={{
-      minHeight: '100vh',
-      padding: '4rem 2rem',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}>
+    <div className="experience-container">
       <h2 style={{
         fontSize: '2.5rem',
         marginBottom: '3rem',
@@ -59,53 +54,24 @@ export default function Experience() {
         Experience
       </h2>
 
-      <div style={{
-        maxWidth: '900px',
-        width: '100%',
-        position: 'relative',
-      }}>
+      <div className="timeline-wrapper">
         {/* Timeline line */}
-        <div style={{
-          position: 'absolute',
-          left: '20px',
-          top: '40px',
-          bottom: '40px',
-          width: '2px',
-          background: 'var(--accent)',
-        }} />
+        <div className="timeline-line" />
 
         {experiences.map((exp, index) => (
           <div
             key={index}
+            className="experience-item"
             style={{
-              position: 'relative',
               marginBottom: index < experiences.length - 1 ? '4rem' : '0',
-              paddingLeft: '60px',
             }}
           >
             {/* Dot */}
-            <div style={{
-              position: 'absolute',
-              left: '11px',
-              top: '8px',
-              width: '20px',
-              height: '20px',
-              borderRadius: '50%',
-              background: 'var(--background)',
-              border: '3px solid var(--foreground)',
-              zIndex: 2,
-            }} />
+            <div className="experience-dot" />
 
             {/* Content without box */}
             <div>
-              <div style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'flex-start',
-                marginBottom: '0.5rem',
-                flexWrap: 'wrap',
-                gap: '0.5rem',
-              }}>
+              <div className="experience-header">
                 <div>
                   <h3 style={{
                     fontSize: '1.5rem',
@@ -123,7 +89,7 @@ export default function Experience() {
                     {exp.role}
                   </p>
                 </div>
-                <div style={{
+                <div className="period-location" style={{
                   textAlign: 'right',
                 }}>
                   <p style={{
@@ -186,8 +152,6 @@ export default function Experience() {
                         textDecoration: 'underline',
                         transition: 'opacity 0.2s',
                       }}
-                      onMouseEnter={(e) => e.target.style.opacity = '0.7'}
-                      onMouseLeave={(e) => e.target.style.opacity = '1'}
                     >
                       {link.text} ↗
                     </a>

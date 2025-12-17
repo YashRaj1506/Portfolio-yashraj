@@ -1,0 +1,133 @@
+.nav-container {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 90%;
+    max-width: 800px;
+    background-color: #fdfcf0;
+    color: #1a1a1a;
+    border-radius: 50px;
+    padding: 0.75rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-container-scrolled {
+    padding: 0.5rem 0.5rem;
+    max-width: 750px;
+    top: 1.5rem;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 0.5rem;
+    width: 100px;
+    transition: opacity 0.3s ease;
+}
+
+.logo-box {
+    width: 32px;
+    height: 32px;
+    background-color: #1a1a1a;
+    color: #fdfcf0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.logo-text {
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+}
+
+.nav-center {
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    width: auto;
+}
+
+.nav-right {
+    width: 100px;
+    margin-right: 0.5rem;
+}
+
+.nav-link {
+    color: #1a1a1a;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0.5rem;
+        top: 1rem;
+        width: 95%;
+    }
+
+    .nav-left {
+        width: auto;
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    .nav-center {
+        position: static;
+        transform: none;
+        flex: 1;
+        justify-content: center;
+        gap: 0.2rem;
+    }
+
+    .nav-link {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.5rem;
+    }
+
+    .nav-right {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        border-radius: 30px;
+    }
+
+    .nav-link {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.4rem;
+    }
+
+    .nav-left {
+        display: none;
+    }
+}

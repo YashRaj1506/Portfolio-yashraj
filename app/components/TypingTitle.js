@@ -35,19 +35,32 @@ const TypingTitle = () => {
   }, [displayText, isDeleting, loopNum, typingSpeed]);
 
   return (
-    <h1 style={{ 
-      fontSize: '3rem', 
-      marginBottom: '1rem',
-      fontWeight: '700',
-      letterSpacing: '-0.02em',
-      minHeight: '3.6rem', // Prevent layout shift
-    }}>
+    <h1 className="typing-title">
       {displayText}
       <span style={{ fontWeight: '100', animation: 'blink 1s step-end infinite' }}>|</span>
       <style jsx>{`
+        .typing-title {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+          font-weight: 700;
+          letter-spacing: -0.02em;
+          min-height: 3.6rem;
+        }
         @keyframes blink {
           0%, 100% { opacity: 1; }
           50% { opacity: 0; }
+        }
+        @media (max-width: 768px) {
+          .typing-title {
+            font-size: 2rem;
+            min-height: 2.4rem;
+          }
+        }
+        @media (max-width: 480px) {
+          .typing-title {
+            font-size: 1.8rem;
+            min-height: 2.22rem;
+          }
         }
       `}</style>
     </h1>

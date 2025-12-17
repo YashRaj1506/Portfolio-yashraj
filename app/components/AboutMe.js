@@ -3,23 +3,13 @@
 import Image from "next/image";
 import profilePic from "../Gemini_Generated_Image_898wya898wya898w.png";
 
+import './aboutme.css';
+
 export default function AboutMe() {
   return (
-    <div style={{
-      minHeight: '100vh',
-      padding: '2rem',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: '4rem',
-      maxWidth: '1200px',
-      margin: '0 auto',
-    }}>
+    <div className="about-me-container">
       {/* Left side - Text */}
-      <div style={{
-        flex: 1,
-        maxWidth: '600px',
-      }}>
+      <div className="about-me-text">
         <h2 style={{
           fontSize: '2.5rem',
           marginBottom: '1.5rem',
@@ -67,22 +57,13 @@ export default function AboutMe() {
       </div>
 
       {/* Right side - Image */}
-      <div style={{
-        flex: 1,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
+      <div className="about-me-image-container">
         <Image 
           src={profilePic}
           alt="Profile Picture"
           width={400}
           height={400}
-          style={{ 
-            borderRadius: '16px',
-            border: '3px solid var(--accent)',
-            objectFit: 'cover',
-          }}
+          className="about-me-image"
           priority
         />
       </div>

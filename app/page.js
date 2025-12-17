@@ -85,12 +85,13 @@ export default function Home() {
         padding: '2rem',
         textAlign: 'center',
       }}>
-        <div style={{ maxWidth: '600px' }}>
+        <div style={{ maxWidth: '600px', width: '100%' }}>
           <TypingTitle />
-          <p style={{ 
+          <p className="hero-description" style={{ 
             fontSize: '1.25rem', 
             lineHeight: '1.6',
             color: 'var(--accent)',
+            padding: '0 1rem',
           }}>
             A Backend engineer and a curious engineer building things for the world.
           </p>
@@ -99,6 +100,13 @@ export default function Home() {
             Scroll down for more<br/>
             ↓
           </div>
+          <style jsx>{`
+            @media (max-width: 768px) {
+              .hero-description {
+                font-size: 1rem !important;
+              }
+            }
+          `}</style>
         </div>
         
         <FloatingDock />
