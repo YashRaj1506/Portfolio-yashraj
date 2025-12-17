@@ -1,0 +1,19 @@
+.bento-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--foreground);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.group\/canvas-card:hover .icon-container {
+    transform: translateY(-1rem);
+    opacity: 0;
+}
+
+.group\/canvas-card:hover .card-title {
+    color: white;
+    transform: translateY(-0.5rem);
+}
+
+.group\/canvas-card:hover .card-description {
+    color: rgba(255, 255, 255, 0.8);
+}

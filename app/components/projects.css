@@ -1,0 +1,13 @@
+.project-card {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 968px) {
+    .project-card {
+        grid-column: span 2;
+    }
+}

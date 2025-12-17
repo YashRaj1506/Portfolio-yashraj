@@ -1,0 +1,5 @@
+.experience-card:hover {
+    transform: translateX(5px);
+    border-color: var(--foreground);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
